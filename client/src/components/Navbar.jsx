@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { AiOutlineAlignRight, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import CropsContentContext from "../Context/cropsContent/CropsContentContext";
 
 export const navLinks = [
   {
@@ -29,6 +30,8 @@ const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [showDropDown, setShowDropDown] = useState(false);
+
+  const CropsObj = useContext(CropsContentContext);
 
   return (
     <div className="bg-navbar w-full overflow-hidden fixed z-[1]">
@@ -80,6 +83,7 @@ const Navbar = () => {
                     role="menuitem"
                     onClick={() => {
                       setShowDropDown(false);
+                      CropsObj.fetchMonths("Summer");
                     }}
                   >
                     Summer
@@ -91,6 +95,7 @@ const Navbar = () => {
                     role="menuitem"
                     onClick={() => {
                       setShowDropDown(false);
+                      CropsObj.fetchMonths("Autumn");
                     }}
                   >
                     Autumn
@@ -102,6 +107,7 @@ const Navbar = () => {
                     role="menuitem"
                     onClick={() => {
                       setShowDropDown(false);
+                      CropsObj.fetchMonths("Spring");
                     }}
                   >
                     Spring
@@ -113,6 +119,7 @@ const Navbar = () => {
                     role="menuitem"
                     onClick={() => {
                       setShowDropDown(false);
+                      CropsObj.fetchMonths("Winter");
                     }}
                   >
                     Winter
@@ -124,6 +131,7 @@ const Navbar = () => {
                     role="menuitem"
                     onClick={() => {
                       setShowDropDown(false);
+                      CropsObj.fetchMonths("PreWinter");
                     }}
                   >
                     PreWinter
@@ -135,6 +143,7 @@ const Navbar = () => {
                     role="menuitem"
                     onClick={() => {
                       setShowDropDown(false);
+                      CropsObj.fetchMonths("Monsoon");
                     }}
                   >
                     Monsoon
@@ -228,6 +237,7 @@ const Navbar = () => {
                         role="menuitem"
                         onClick={() => {
                           setShowDropDown(false);
+                          CropsObj.fetchMonths("Summer");
                         }}
                       >
                         Summer
@@ -239,6 +249,7 @@ const Navbar = () => {
                         role="menuitem"
                         onClick={() => {
                           setShowDropDown(false);
+                          CropsObj.fetchMonths("Autumn");
                         }}
                       >
                         Autumn
@@ -250,6 +261,7 @@ const Navbar = () => {
                         role="menuitem"
                         onClick={() => {
                           setShowDropDown(false);
+                          CropsObj.fetchMonths("Winter");
                         }}
                       >
                         Winter
@@ -261,6 +273,7 @@ const Navbar = () => {
                         role="menuitem"
                         onClick={() => {
                           setShowDropDown(false);
+                          CropsObj.fetchMonths("PreWinter");
                         }}
                       >
                         PreWinter
@@ -272,6 +285,7 @@ const Navbar = () => {
                         role="menuitem"
                         onClick={() => {
                           setShowDropDown(false);
+                          CropsObj.fetchMonths("Spring");
                         }}
                       >
                         Spring
@@ -283,6 +297,7 @@ const Navbar = () => {
                         role="menuitem"
                         onClick={() => {
                           setShowDropDown(false);
+                          CropsObj.fetchMonths("Monsoon");
                         }}
                       >
                         Monsoon

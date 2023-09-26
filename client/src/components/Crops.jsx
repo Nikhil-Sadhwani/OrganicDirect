@@ -17,28 +17,31 @@ export default function Crops() {
   };
   useEffect(() => {
     setShowDetails(false);
-    CropsObj.fetchMonths(CropsObj[season]);
+    // CropsObj.fetchMonths(CropsObj[season]);
+
+    CropsObj.fetchMonths(season);
   }, []);
 
   return (
     <>
-      {!showDetails ? (
-        <div
-          className="relative top-[100px] bg-no-repeat bg-cover bg-fixed"
-          // style={{
-          //   backgroundImage: `url(${illustrateImg}) `,
-          // }}
-        >
-          <h2 className="text-5xl h-[4.25rem] font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#A6EEC5] to-[#00560B]">
-            {season}
-          </h2>
-          {CropsObj.uniqueMonth.map((month) => {
-            return (
-              <>
-                <h4 className="text-5xl font-600 text-black m-6">{month}</h4>
-                <div className="w-[96%] h-[3px] bg-black m-auto"></div>
-                <div className=" grid  gap-[0.5rem] w-[66%] p-[21px] sm:w-[100%] sm:grid-cols-2 lg:grid-cols-4">
-                  {CropsObj[season].map((crop, key) => {
+      {/* {!showDetails ? ( */}
+      <div
+        className="relative top-[100px] bg-no-repeat bg-cover bg-fixed"
+        // style={{
+        //   backgroundImage: `url(${illustrateImg}) `,
+        // }}
+      >
+        <h2 className="text-5xl h-[4.25rem] font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#A6EEC5] to-[#00560B]">
+          {season}
+        </h2>
+        {CropsObj.uniqueMonth.map((month) => {
+          return (
+            <>
+              <h4 className="text-5xl font-600 text-black m-6">{month}</h4>
+              <div className="w-[96%] h-[3px] bg-black m-auto"></div>
+              <div className=" grid  gap-[0.5rem] w-[66%] p-[21px] sm:w-[100%] sm:grid-cols-2 lg:grid-cols-4">
+                {CropsObj.Crops.map((crop, key) => {
+                  if (crop.season === season) {
                     if (crop.startMonth === month) {
                       return (
                         <div
@@ -48,8 +51,8 @@ export default function Crops() {
                           }`}
                         >
                           <Link
-                            // to="/cropdetails"
-                            onClick={() => funcOfDetails(crop)}
+                            to={`/crop/${crop.name}`}
+                            // onClick={() => funcOfDetails(crop)}
                             className="group relative block bg-black rounded-[6%] sm:h-[378px]"
                           >
                             <img
@@ -75,16 +78,18 @@ export default function Crops() {
                         </div>
                       );
                     }
-                    return false;
-                  })}
-                </div>
-              </>
-            );
-          })}
-        </div>
-      ) : (
+                  }
+                  return false;
+                })}
+              </div>
+            </>
+          );
+        })}
+      </div>
+      {/* ) 
+      : (
         <CropDetails propArray={propArray} />
-      )}
+      )} */}
     </>
   );
 }
