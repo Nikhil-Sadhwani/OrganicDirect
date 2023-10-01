@@ -14,7 +14,7 @@ export default function CropDetails(props) {
       {CropsObj.Crops.map((crop) => {
         if (crop.name === cropname) {
           return (
-            <div>
+            <div className=" ">
               <img
                 className="fixed top-0 h-[50vh] w-screen z-[-1]"
                 src={crop.imageName}
@@ -62,11 +62,11 @@ export default function CropDetails(props) {
                   className="flex mt-[-25px]"
                   style={{ alignItems: "center" }}
                 >
-                  <img
+                  {/* <img
                     className="w-[200px] h-[200px]"
                     src={crop.imageName}
                     alt="Loading..."
-                  />
+                  /> */}
                   <div className=" mx-8 text-center">
                     <h2 className="text-[35px] font-bold">{crop.name}</h2>
                     <p className="ml-3">{crop.description}</p>
@@ -75,38 +75,42 @@ export default function CropDetails(props) {
 
                 <div className="grid grid-cols-2 mt-5">
                   <div
-                    className="text-center mx-2 bg-gray-300 border-[1px] rounded-lg border-black hover:bg-black hover:text-white"
+                    className="text-center border-2 border-black hover:bg-slate-400 hover:bg-opacity-10 "
                     onClick={() => {
                       showContent
                         ? setShowContent(!showContent)
                         : setShowContent(false);
                     }}
                   >
-                    <h2 className="text-[17px] font-[600]">Education</h2>
+                    <h2 className="text-[17px] font-[600] cursor-pointer">
+                      Education
+                    </h2>
                   </div>
                   <div
-                    className="text-center mx-2 bg-gray-300 border-[1px] rounded-lg border-black hover:bg-black hover:text-white"
+                    className="text-center border-2 border-l-0 border-black hover:bg-slate-400 hover:bg-opacity-10"
                     onClick={() => {
                       showContent
                         ? setShowContent(true)
                         : setShowContent(!showContent);
                     }}
                   >
-                    <h2 className="text-[17px] font-[600]">Cultivation</h2>
+                    <h2 className="text-[17px] font-[600] cursor-pointer">
+                      Cultivation
+                    </h2>
                   </div>
                 </div>
                 <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
                   <div className="-ml-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
                     <img
-                      className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
-                      src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+                      className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[38rem] sm:h-[38rem]"
+                      src={crop.imageName}
                       alt=""
                     />
                   </div>
                   <div className={`p-10 ${showContent ? "hidden" : ""}`}>
                     {crop.education.map((content) => {
                       return (
-                        <div className="mx-auto mb-7 border-b-[1px] border-black max-w-2xl lg:mx-0">
+                        <div className="mx-auto mb-9 border-b-[1px] border-black max-w-2xl lg:mx-0">
                           <h2 className="text-3xl font-bold tracking-tight text-gray-700 sm:text-4xl">
                             {content.heading}
                           </h2>

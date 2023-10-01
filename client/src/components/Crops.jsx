@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import CropsContentContext from "../Context/cropsContent/CropsContentContext";
-import background from "../assets/autumn/bg-1.jpg";
 import CropDetails from "./CropDetails";
 
 export default function Crops() {
@@ -26,6 +25,7 @@ export default function Crops() {
   return (
     <>
       {/* {!showDetails ? ( */}
+
       <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <svg
@@ -58,11 +58,9 @@ export default function Crops() {
             />
           </svg>
         </div>
-
         <h2 className="text-5xl h-[4.25rem] font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-[#A6EEC5] to-[#00560B]">
           {season}
         </h2>
-
         {CropsObj.uniqueMonth.map((month) => {
           return (
             <>

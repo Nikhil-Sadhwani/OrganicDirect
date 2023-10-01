@@ -6,7 +6,7 @@ import pepper from "../assets/summer/pepper.jpg";
 import pumpkin from "../assets/summer/pumpkin.jpg";
 import tomato from "../assets/spring/tomato.jpg";
 import wheat from "../assets/winter/wheat.jpg";
-import summerHome from "../assets//summerHome.png";
+import homeVideo from "../assets/homeVideo.mp4";
 import {
   BsFillSunFill,
   BsFillCloudRainFill,
@@ -18,6 +18,7 @@ import { Link } from "react-router-dom";
 import CropsContentContext from "../Context/cropsContent/CropsContentContext";
 
 export default function Home() {
+  let count = 0;
   const CropsObj = useContext(CropsContentContext);
   const icon = [
     {
@@ -52,38 +53,6 @@ export default function Home() {
     },
   ];
 
-  const cards = [
-    {
-      id: 1,
-      name: "Corn",
-      imageName: corn,
-    },
-    {
-      id: 2,
-      name: "Cucumber",
-      imageName: cucumber,
-    },
-    {
-      id: 3,
-      name: "Pepper",
-      imageName: pepper,
-    },
-    {
-      id: 4,
-      name: "Pumpkin",
-      imageName: pumpkin,
-    },
-    {
-      id: 5,
-      name: "Tomato",
-      imageName: tomato,
-    },
-    {
-      id: 6,
-      name: "Wheat",
-      imageName: wheat,
-    },
-  ];
   return (
     <>
       {/* Starting section  */}
@@ -99,10 +68,6 @@ export default function Home() {
         />
 
         <h2 className="mb-4 text-5xl font-bold text-white">Organic Direct</h2>
-
-        {/* <p className="mb-12 text-base text-[#E7FBF1] font-bold ">
-          This is a title for our website
-        </p> */}
 
         {/* Box with category  */}
         <div className=" grid grid-cols-3  text-white w-[500px] h-[250px]">
@@ -125,48 +90,69 @@ export default function Home() {
       {/* Cards for Specific months  */}
       <div
         className="w-[95%] m-5  flex justify-around sm:flex-col sm:p-4 md:flex-row bg-no-repeat bg-cover"
-        style={{
-          backgroundImage: `url(${summerHome}) `,
-        }}
+        // style={{
+        //   backgroundImage: `url(${summerHome}) `,
+        // }}
       >
+        <video
+          className="absolute z-[-1] w-[95%] h-[105%]"
+          autoPlay
+          muted
+          loop
+          id="video"
+        >
+          <source src={homeVideo} type="video/mp4" />
+        </video>
+        {/* <img
+          className="absolute z-[-1] w-[95%] h-[105%]"
+          src={homeVideo}
+          alt=""
+        /> */}
+
         <div className="mt-[44px] flex ">
           <div className="w-[11px] h-[62px] bg-white mr-[8px] rounded-md"></div>
           <h2 className=" text-[2.5rem] font-[700] text-white">Summer</h2>
         </div>
 
         <div className=" grid  gap-[0.5rem] w-[66%] p-[21px] sm:w-[100%] sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map((card, key) => {
-            return (
-              <div className="w-[250px] h-[375px] sm:mb-[15px] sm:m-auto ">
-                <Link
-                  to="/"
-                  className="group relative block bg-black rounded-[6%] sm:h-[378px]"
+          {CropsObj.Crops.map((crop, key) => {
+            if (count == 6) {
+              return false;
+            }
+            if (crop.season === "Summer") {
+              count++;
+              return (
+                <div
+                  key={key}
+                  className="w-[250px] h-[375px] sm:mb-[15px] sm:m-auto "
                 >
-                  <img
-                    alt="Developer"
-                    src={card.imageName}
-                    className="absolute inset-0  object-cover opacity-75 transition-opacity group-hover:opacity-50 rounded-[6%] h-[100%] w-[100%]"
-                  />
+                  <Link
+                    to={`/crop/${crop.name}`}
+                    className="group relative block bg-black rounded-[6%] sm:h-[378px]"
+                  >
+                    <img
+                      alt="Developer"
+                      src={crop.imageName}
+                      className="absolute inset-0  object-cover opacity-75 transition-opacity group-hover:opacity-50 rounded-[6%] h-[100%] w-[100%]"
+                    />
 
-                  <div className="relative p-4 sm:p-6 lg:p-8">
-                    <p className="text-xl font-bold text-white sm:text-2xl">
-                      Tony Wayne
-                    </p>
+                    <div className="relative p-4 sm:p-6 lg:p-8">
+                      <p className="text-xl font-bold text-white sm:text-2xl">
+                        {crop.name}
+                      </p>
 
-                    <div className="mt-32 sm:mt-48 lg:mt-24">
-                      <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-                        <p className="text-sm text-white">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing
-                          elit. Omnis perferendis hic asperiores quibusdam
-                          quidem voluptates doloremque reiciendis nostrum harum.
-                          Repudiandae?
-                        </p>
+                      <div className="mt-12 sm:mt-12 lg:mt-12">
+                        <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                          <p className="text-sm text-white">
+                            {crop.description}...
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
-              </div>
-            );
+                  </Link>
+                </div>
+              );
+            }
           })}
         </div>
       </div>

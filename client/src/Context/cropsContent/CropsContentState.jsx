@@ -85,8 +85,6 @@ const CropsContentState = (props) => {
     {
       id: 2,
       name: "Cucumber",
-      description:
-        "Cucumber is a widely cultivated plant in the gourd family, Cucurbitaceae. It is a creeping vine that bears cylindrical fruits used as culinary vegetables. Cucumbers are popular in salads, pickles, and various dishes around the world.",
       imageName: cucumber,
       startMonth: "April",
       endMonth: "June",
@@ -94,8 +92,6 @@ const CropsContentState = (props) => {
     {
       id: 3,
       name: "Pepper",
-      description:
-        "Pepper, also known as bell pepper or capsicum, is a fruit of plants in the nightshade family. It is typically green, yellow, orange, or red when ripe, and can be eaten raw or cooked. Peppers are rich in vitamins and are a popular ingredient in many cuisines.",
       imageName: pepper,
       startMonth: "April",
       endMonth: "May",
@@ -103,8 +99,6 @@ const CropsContentState = (props) => {
     {
       id: 4,
       name: "Pumpkin",
-      description:
-        "Pumpkin is a type of winter squash that is native to North America. It is round with smooth, slightly ribbed skin, and is most often deep yellow to orange in coloration. Pumpkins are used in a wide variety of culinary preparations and are also a popular decoration during Halloween.",
       imageName: pumpkin,
       startMonth: "May",
       endMonth: "June",
@@ -112,17 +106,13 @@ const CropsContentState = (props) => {
     {
       id: 5,
       name: "watermelon",
-      description:
-        "Watermelon is a vine-like flowering plant originating from West Africa. It is a large, juicy fruit known for its sweet taste and high water content. Watermelons are commonly consumed fresh in slices, but can also be used in salads, smoothies, and other dishes.",
       imageName: watermelon_summer,
       startMonth: "May",
       endMonth: "June",
     },
     {
       id: 6,
-      name: "sunflower",
-      description:
-        "Sunflower is an annual plant native to the Americas. It has a large flowering head, called the capitulum, with bright yellow petals and a central disk of seeds. Sunflower seeds are rich in nutrients and are commonly used in cooking or as a snack.",
+      name: "summer",
       imageName: summer_sun,
       startMonth: "March",
       endMonth: "June",
@@ -132,271 +122,213 @@ const CropsContentState = (props) => {
     {
       id: 1,
       name: "broccoli",
-      description:
-        "Broccoli is a green vegetable that belongs to the cabbage family. It is characterized by its compact green flower heads and thick, edible stems. Broccoli is a nutritious vegetable and is often steamed, boiled, or used in stir-fries.",
       imageName: broccoli,
-      startMonth: "September",
-      endMonth: "October",
+      startMonth: "October",
+      endMonth: "November",
     },
     {
       id: 2,
       name: "carrot",
-      description:
-        "Carrot is a root vegetable that is typically orange in color, though purple, black, red, white, and yellow varieties also exist. It is crunchy, tasty, and highly nutritious. Carrots are commonly eaten raw or cooked and are a versatile ingredient in various dishes.",
       imageName: carrot,
-      startMonth: "September",
-      endMonth: "October",
+      startMonth: "October",
+      endMonth: "November",
     },
     {
       id: 3,
       name: "cauliflower",
-      description:
-        "Cauliflower is a cruciferous vegetable that resembles a white version of its cousin, broccoli. It is composed of compact florets that form a rounded head. Cauliflower is a versatile ingredient and can be roasted, boiled, mashed, or used in various recipes.",
       imageName: cauliflower,
-      startMonth: "september",
-      endMonth: "October",
+      startMonth: "November",
+      endMonth: "February",
     },
     {
       id: 4,
       name: "Kale",
-      description:
-        "Kale is a leafy green vegetable that belongs to the cabbage family. It is known for its dark green, curly leaves and is highly nutritious. Kale is often used in salads, smoothies, and as a cooked side dish.",
       imageName: kale,
       startMonth: "September",
-      endMonth: "October",
+      endMonth: "November",
     },
     {
-      //incomplete description
       id: 5,
       name: "Lettuce",
-
       imageName: Lettuce,
-      startMonth: "September",
-      endMonth: "October",
+      startMonth: "october",
+      endMonth: "december",
     },
     {
       id: 6,
       name: "spinach",
-      description:
-        "Spinach is a leafy green vegetable that is rich in vitamins and minerals. It is commonly used in salads, smoothies, and cooked dishes. Spinach is known for its dark green, tender leaves.",
       imageName: spinach,
-      startMonth: "September",
-      endMonth: "October",
+      startMonth: "october",
+      endMonth: "december",
     },
   ];
   const Monsoon = [
     {
       id: 1,
       name: "black_gram",
-      description:
-        "Black gram, also known as urad dal, is a type of lentil that is native to South Asia. It is commonly used in Indian cuisine and is known for its high protein content. Black gram is used to make a variety of dishes, including soups, stews, and curries.",
       imageName: black_gram,
-      startMonth: "July",
-      endMonth: "August",
+      startMonth: "October",
+      endMonth: "March",
     },
     {
       id: 2,
       name: "pigeon_pea",
-      description:
-        "Pigeon pea, also known as arhar dal or toor dal, is a type of legume that is native to India. It is a rich source of protein and is commonly used in Indian cuisine. Pigeon pea is used to make various dishes, including soups, stews, and curries.",
       imageName: pigeon_pea,
-      startMonth: "July",
-      endMonth: "August",
+      startMonth: "October",
+      endMonth: "March",
     },
     {
       id: 3,
       name: "sesame",
-      description:
-        "Sesame is a flowering plant that produces seeds known as sesame seeds. These seeds are used in a wide variety of culinary applications, including as a topping for bread and pastries. Sesame seeds are also used to make sesame oil.",
       imageName: sesame,
-      startMonth: "July",
-      endMonth: "August",
+      startMonth: "October",
+      endMonth: "March",
     },
     {
       id: 4,
       name: "soybean",
-      description:
-        "Soybean is a legume native to East Asia. It is a rich source of protein and is commonly used in various forms, including tofu, soy milk, and as an ingredient in processed foods. Soybeans are also used to make soybean oil.",
       imageName: soybean,
-      startMonth: "July",
-      endMonth: "August",
+      startMonth: "October",
+      endMonth: "March",
     },
     {
       id: 5,
       name: "sugarcane",
-      description:
-        "Sugarcane is a tall, perennial grass that is native to Southeast Asia. It is primarily grown for its juice, which is used to make sugar and other products. Sugarcane is an important crop in many tropical and subtropical regions.",
       imageName: sugarcane,
-      startMonth: "July",
-      endMonth: "August",
+      startMonth: "February",
+      endMonth: "March",
     },
     {
       id: 6,
       name: "tea",
-      description:
-        "Tea is a beverage made from the dried leaves of the Camellia sinensis plant. It is one of the most widely consumed beverages in the world and is known for its various flavors and health benefits. Tea is commonly prepared by steeping the leaves in hot water.",
       imageName: tea,
-      startMonth: "July",
-      endMonth: "August",
+      startMonth: "September",
+      endMonth: "october",
     },
   ];
   const PreWinter = [
     {
       id: 1,
       name: "beet",
-      description:
-        "Beet is a root vegetable known for its deep red color and sweet, earthy flavor. It is commonly used in salads, soups, and as a cooked side dish. Beet juice is also popular for its vibrant color and potential health benefits.",
       imageName: beet,
-      startMonth: "November",
-      endMonth: "December",
+      startMonth: "April",
+      endMonth: "May",
     },
     {
       id: 2,
       name: "garlic",
-      description:
-        "Garlic is a pungent bulbous plant that is widely used as a seasoning in various cuisines around the world. It is known for its strong flavor and aroma. Garlic is used in both raw and cooked forms to add flavor to dishes.",
       imageName: garlic,
-      startMonth: "November",
-      endMonth: "December",
+      startMonth: "May",
+      endMonth: "June",
     },
     {
       id: 3,
       name: "methi",
-      description:
-        "Methi, also known as fenugreek, is a herbaceous plant that is native to the Mediterranean region. Both its leaves and seeds are used in cooking. Methi leaves have a slightly bitter flavor and are used in a variety of dishes, while the seeds are used as a spice.",
       imageName: methi,
-      startMonth: "November",
-      endMonth: "December",
+      startMonth: "April",
+      endMonth: "June",
     },
     {
       id: 4,
       name: "onion",
-      description:
-        "Onion is a bulbous plant known for its pungent flavor and aroma. It is widely used as a flavoring agent in various dishes and is a staple ingredient in many cuisines around the world. Onions can be consumed raw, cooked, or as a seasoning.",
       imageName: onion,
-      startMonth: "November",
-      endMonth: "December",
+      startMonth: "May",
+      endMonth: "June",
     },
     {
       id: 5,
       name: "radish",
-      description:
-        "Radish is a root vegetable that comes in various colors, including red, white, and black. It has a crisp texture and a slightly peppery flavor. Radishes are commonly eaten raw in salads, but can also be cooked in a variety of dishes.",
       imageName: radish,
-      startMonth: "November",
-      endMonth: "December",
+      startMonth: "April",
+      endMonth: "May",
     },
     {
       id: 6,
       name: "spinach",
-      description:
-        "Spinach is a leafy green vegetable that is rich in vitamins and minerals. It is commonly used in salads, smoothies, and cooked dishes. Spinach is known for its dark green, tender leaves.",
       imageName: spinachPreWinter,
-      startMonth: "November",
-      endMonth: "December",
+      startMonth: "May",
+      endMonth: "June",
     },
   ];
   const Winter = [
     {
       id: 1,
       name: "Brussels_Sprouts",
-      description:
-        "Brussels Sprouts are small, leafy green vegetables that belong to the cabbage family. They grow in clusters along the stem and are known for their slightly bitter flavor. Brussels sprouts are commonly roasted, sautéed, or used in salads.",
       imageName: Brussels_Sprouts,
-      startMonth: "January",
-      endMonth: "February",
+      startMonth: "April",
+      endMonth: "May",
     },
     {
       id: 2,
-      name: "cotton",
-      description:
-        "Cotton is a soft, fluffy fiber that surrounds the seeds of the cotton plant. It is primarily used to make textiles, including clothing, bedding, and industrial products. Cotton is one of the most widely used natural fibers in the world.",
+      name: "cotton_winter",
       imageName: cotton_winter,
-      startMonth: "January",
-      endMonth: "February",
+      startMonth: "May",
+      endMonth: "June",
     },
     {
       id: 3,
-      name: "mustard",
-      description:
-        "Mustard is a plant in the cabbage family that produces seeds used as a spice. It is known for its pungent flavor and is commonly used in condiments, sauces, and pickles. Mustard seeds can also be pressed to extract mustard oil.",
+      name: "mustard_winter",
       imageName: mustard_winter,
-      startMonth: "January",
-      endMonth: "February",
+      startMonth: "May",
+      endMonth: "June",
     },
     {
       id: 4,
       name: "peas_winter",
-      description:
-        "Wheat is a cereal grain that is a staple food in many parts of the world. It is used to make a wide range of products, including bread, pasta, and cereals. Wheat is known for its high carbohydrate content and is a significant source of energy.",
       imageName: peas_winter,
-      startMonth: "January",
-      endMonth: "February",
+      startMonth: "May",
+      endMonth: "June",
     },
     {
       id: 5,
       name: "wheat",
-      description:
-        "Wheat is a cereal grain that is a staple food in many parts of the world. It is used to make a wide range of products, including bread, pasta, and cereals. Wheat is known for its high carbohydrate content and is a significant source of energy.",
       imageName: wheat,
-      startMonth: "January",
-      endMonth: "February",
+      startMonth: "May",
+      endMonth: "June",
     },
   ];
   const Spring = [
     {
       id: 1,
       name: "Asparagus",
-      description:
-        "Asparagus is a perennial vegetable known for its tender, edible spears. It is typically green or white in color and is highly nutritious. Asparagus can be boiled, steamed, roasted, or used in a variety of dishes.",
       imageName: Asparagus,
-      startMonth: "March",
+      startMonth: "February",
       endMonth: "April",
     },
     {
       id: 2,
       name: "ladyfinger",
-      description:
-        "Ladyfinger, also known as okra, is a green, pod-shaped vegetable that is commonly used in various cuisines, especially in Southern and Asian dishes. It is known for its slimy texture when cooked and is used in stews, soups, and stir-fries.",
       imageName: ladyfinger,
       startMonth: "March",
-      endMonth: "April",
+      endMonth: "June",
     },
     {
       id: 3,
       name: "mango",
-      description:
-        "Mango is a tropical fruit known for its sweet and juicy flesh. It comes in various shapes, sizes, and colors, depending on the variety. Mangoes are commonly eaten fresh, but can also be used in smoothies, salads, and desserts.",
       imageName: mango,
       startMonth: "March",
-      endMonth: "April",
+      endMonth: "June",
     },
     {
       id: 4,
       name: "swiss",
-      description:
-        "Swiss chard is a leafy green vegetable that is related to beets and spinach. It has colorful stems and dark green leaves. Swiss chard is known for its slightly bitter flavor and is used in salads, sautés, and other dishes.",
       imageName: swiss,
       startMonth: "March",
-      endMonth: "April",
+      endMonth: "June",
     },
     {
       id: 5,
       name: "tomato",
-      description:
-        "Tomato is a red or yellowish fruit with a juicy pulp, used as a vegetable in cooking. It is an essential ingredient in many cuisines around the world, used in sauces, soups, salads, and various cooked dishes.",
       imageName: tomato,
       startMonth: "March",
-      endMonth: "April",
+      endMonth: "May",
     },
     {
       id: 6,
       name: "Zucchini",
-      description:
-        "Zucchini, also known as courgette, is a summer squash that is typically dark or light green in color. It has a mild flavor and tender texture. Zucchini can be grilled, sautéed, baked, or used in various dishes.",
       imageName: Zucchini,
       startMonth: "May",
-      endMonth: "April",
+      endMonth: "June",
     },
   ];
 
@@ -491,6 +423,8 @@ const CropsContentState = (props) => {
     {
       id: 2,
       name: "Cucumber",
+      description:
+        "Cucumber is a widely cultivated plant in the gourd family, Cucurbitaceae. It is a creeping vine that bears cylindrical fruits used as culinary vegetables. Cucumbers are popular in salads, pickles, and various dishes around the world.",
       imageName: cucumber,
       startMonth: "May",
       endMonth: "June",
@@ -575,6 +509,8 @@ const CropsContentState = (props) => {
     {
       id: 3,
       name: "Pepper",
+      description:
+        "Pepper, also known as bell pepper or capsicum, is a fruit of plants in the nightshade family. It is typically green, yellow, orange, or red when ripe, and can be eaten raw or cooked. Peppers are rich in vitamins and are a popular ingredient in many cuisines.",
       imageName: pepper,
       startMonth: "May",
       endMonth: "June",
@@ -659,6 +595,8 @@ const CropsContentState = (props) => {
     {
       id: 4,
       name: "Pumpkin",
+      description:
+        "Pumpkin is a type of winter squash that is native to North America. It is round with smooth, slightly ribbed skin, and is most often deep yellow to orange in coloration. Pumpkins are used in a wide variety of culinary preparations and are also a popular decoration during Halloween.",
       imageName: pumpkin,
       startMonth: "May",
       endMonth: "July",
@@ -743,6 +681,8 @@ const CropsContentState = (props) => {
     {
       id: 5,
       name: "watermelon",
+      description:
+        "Watermelon is a vine-like flowering plant originating from West Africa. It is a large, juicy fruit known for its sweet taste and high water content. Watermelons are commonly consumed fresh in slices, but can also be used in salads, smoothies, and other dishes.",
       imageName: watermelon_summer,
       startMonth: "June",
       endMonth: "July",
@@ -827,6 +767,8 @@ const CropsContentState = (props) => {
     {
       id: 6,
       name: "sunflower",
+      description:
+        "Sunflower is an annual plant native to the Americas. It has a large flowering head, called the capitulum, with bright yellow petals and a central disk of seeds. Sunflower seeds are rich in nutrients and are commonly used in cooking or as a snack.",
       imageName: summer_sun,
       startMonth: "June",
       endMonth: "July",
@@ -999,6 +941,8 @@ const CropsContentState = (props) => {
     {
       id: 2,
       name: "ladyfinger",
+      description:
+        "Asparagus is a perennial vegetable known for its tender, edible spears. It is typically green or white in color and is highly nutritious. Asparagus can be boiled, steamed, roasted, or used in a variety of dishes.",
       imageName: ladyfinger,
       startMonth: "March",
       endMonth: "April",
@@ -1073,6 +1017,8 @@ const CropsContentState = (props) => {
     {
       id: 3,
       name: "mango",
+      description:
+        "Mango is a tropical fruit known for its sweet and juicy flesh. It comes in various shapes, sizes, and colors, depending on the variety. Mangoes are commonly eaten fresh, but can also be used in smoothies, salads, and desserts.",
       imageName: mango,
       startMonth: "March",
       endMonth: "April",
@@ -1147,6 +1093,8 @@ const CropsContentState = (props) => {
     {
       id: 4,
       name: "swiss",
+      description:
+        "Swiss chard is a leafy green vegetable that is related to beets and spinach. It has colorful stems and dark green leaves. Swiss chard is known for its slightly bitter flavor and is used in salads, sautés, and other dishes.",
       imageName: swiss,
       startMonth: "March",
       endMonth: "April",
@@ -1221,6 +1169,8 @@ const CropsContentState = (props) => {
     {
       id: 5,
       name: "tomato",
+      description:
+        "Tomato is a red or yellowish fruit with a juicy pulp, used as a vegetable in cooking. It is an essential ingredient in many cuisines around the world, used in sauces, soups, salads, and various cooked dishes.",
       imageName: tomato,
       startMonth: "April",
       endMonth: "May",
@@ -1295,6 +1245,8 @@ const CropsContentState = (props) => {
     {
       id: 6,
       name: "Zucchini",
+      description:
+        "Zucchini, also known as courgette, is a summer squash that is typically dark or light green in color. It has a mild flavor and tender texture. Zucchini can be grilled, sautéed, baked, or used in various dishes.",
       imageName: Zucchini,
       startMonth: "April",
       endMonth: "May",
@@ -1371,6 +1323,8 @@ const CropsContentState = (props) => {
     {
       id: 1,
       name: "broccoli",
+      description:
+        "Broccoli is a green vegetable that belongs to the cabbage family. It is characterized by its compact green flower heads and thick, edible stems. Broccoli is a nutritious vegetable and is often steamed, boiled, or used in stir-fries.",
       imageName: broccoli,
       startMonth: "September",
       endMonth: "October",
@@ -1455,6 +1409,8 @@ const CropsContentState = (props) => {
     {
       id: 2,
       name: "carrot",
+      description:
+        "Carrot is a root vegetable that is typically orange in color, though purple, black, red, white, and yellow varieties also exist. It is crunchy, tasty, and highly nutritious. Carrots are commonly eaten raw or cooked and are a versatile ingredient in various dishes.",
       imageName: carrot,
       startMonth: "September",
       endMonth: "October",
@@ -1539,6 +1495,8 @@ const CropsContentState = (props) => {
     {
       id: 3,
       name: "cauliflower",
+      description:
+        "Cauliflower is a cruciferous vegetable that resembles a white version of its cousin, broccoli. It is composed of compact florets that form a rounded head. Cauliflower is a versatile ingredient and can be roasted, boiled, mashed, or used in various recipes.",
       imageName: cauliflower,
       startMonth: "September",
       endMonth: "October",
@@ -1623,6 +1581,8 @@ const CropsContentState = (props) => {
     {
       id: 4,
       name: "Kale",
+      description:
+        "Kale is a leafy green vegetable that belongs to the cabbage family. It is known for its dark green, curly leaves and is highly nutritious. Kale is often used in salads, smoothies, and as a cooked side dish.",
       imageName: kale,
       startMonth: "October",
       endMonth: "November",
@@ -1707,6 +1667,8 @@ const CropsContentState = (props) => {
     {
       id: 5,
       name: "Lettuce",
+      description:
+        "Lettuce is a leafy green vegetable that is commonly used in salads, sandwiches, and wraps. It is known for its crisp texture and mild, refreshing flavor. Lettuce comes in various varieties, including iceberg, romaine, and leaf lettuce.",
       imageName: Lettuce,
       startMonth: "October",
       endMonth: "November",
@@ -1791,6 +1753,8 @@ const CropsContentState = (props) => {
     {
       id: 6,
       name: "spinach",
+      description:
+        "Spinach is a leafy green vegetable that is rich in vitamins and minerals. It is commonly used in salads, smoothies, and cooked dishes. Spinach is known for its dark green, tender leaves.",
       imageName: spinach,
       startMonth: "September",
       endMonth: "October",
@@ -1877,6 +1841,8 @@ const CropsContentState = (props) => {
     {
       id: 1,
       name: "black_gram",
+      description:
+        "Black gram, also known as urad dal, is a type of lentil that is native to South Asia. It is commonly used in Indian cuisine and is known for its high protein content. Black gram is used to make a variety of dishes, including soups, stews, and curries.",
       imageName: black_gram,
       startMonth: "July",
       endMonth: "August",
@@ -1961,6 +1927,8 @@ const CropsContentState = (props) => {
     {
       id: 2,
       name: "pigeon_pea",
+      description:
+        "Pigeon pea, also known as arhar dal or toor dal, is a type of legume that is native to India. It is a rich source of protein and is commonly used in Indian cuisine. Pigeon pea is used to make various dishes, including soups, stews, and curries.",
       imageName: pigeon_pea,
       startMonth: "July",
       endMonth: "August",
@@ -2045,6 +2013,8 @@ const CropsContentState = (props) => {
     {
       id: 3,
       name: "sesame",
+      description:
+        "Sesame is a flowering plant that produces seeds known as sesame seeds. These seeds are used in a wide variety of culinary applications, including as a topping for bread and pastries. Sesame seeds are also used to make sesame oil.",
       imageName: sesame,
       startMonth: "July",
       endMonth: "August",
@@ -2129,6 +2099,8 @@ const CropsContentState = (props) => {
     {
       id: 4,
       name: "soybean",
+      description:
+        "Soybean is a legume native to East Asia. It is a rich source of protein and is commonly used in various forms, including tofu, soy milk, and as an ingredient in processed foods. Soybeans are also used to make soybean oil.",
       imageName: soybean,
       startMonth: "July",
       endMonth: "August",
@@ -2213,6 +2185,8 @@ const CropsContentState = (props) => {
     {
       id: 5,
       name: "sugarcane",
+      description:
+        "Sugarcane is a tall, perennial grass that is native to Southeast Asia. It is primarily grown for its juice, which is used to make sugar and other products. Sugarcane is an important crop in many tropical and subtropical regions.",
       imageName: sugarcane,
       startMonth: "August",
       endMonth: "September",
@@ -2297,6 +2271,8 @@ const CropsContentState = (props) => {
     {
       id: 6,
       name: "tea",
+      description:
+        "Tea is a beverage made from the dried leaves of the Camellia sinensis plant. It is one of the most widely consumed beverages in the world and is known for its various flavors and health benefits. Tea is commonly prepared by steeping the leaves in hot water.",
       imageName: tea,
       startMonth: "August",
       endMonth: "September",
@@ -2383,6 +2359,8 @@ const CropsContentState = (props) => {
     {
       id: 1,
       name: "beet",
+      description:
+        "Beet is a root vegetable known for its deep red color and sweet, earthy flavor. It is commonly used in salads, soups, and as a cooked side dish. Beet juice is also popular for its vibrant color and potential health benefits.",
       imageName: beet,
       startMonth: "November",
       endMonth: "December",
@@ -2467,6 +2445,8 @@ const CropsContentState = (props) => {
     {
       id: 2,
       name: "garlic",
+      description:
+        "Garlic is a pungent bulbous plant that is widely used as a seasoning in various cuisines around the world. It is known for its strong flavor and aroma. Garlic is used in both raw and cooked forms to add flavor to dishes.",
       imageName: garlic,
       startMonth: "November",
       endMonth: "December",
@@ -2551,6 +2531,8 @@ const CropsContentState = (props) => {
     {
       id: 3,
       name: "methi",
+      description:
+        "Methi, also known as fenugreek, is a herbaceous plant that is native to the Mediterranean region. Both its leaves and seeds are used in cooking. Methi leaves have a slightly bitter flavor and are used in a variety of dishes, while the seeds are used as a spice.",
       imageName: methi,
       startMonth: "November",
       endMonth: "December",
@@ -2635,6 +2617,8 @@ const CropsContentState = (props) => {
     {
       id: 4,
       name: "onion",
+      description:
+        "Onion is a bulbous plant known for its pungent flavor and aroma. It is widely used as a flavoring agent in various dishes and is a staple ingredient in many cuisines around the world. Onions can be consumed raw, cooked, or as a seasoning.",
       imageName: onion,
       startMonth: "December",
       endMonth: "January",
@@ -2719,6 +2703,8 @@ const CropsContentState = (props) => {
     {
       id: 5,
       name: "radish",
+      description:
+        "Radish is a root vegetable that comes in various colors, including red, white, and black. It has a crisp texture and a slightly peppery flavor. Radishes are commonly eaten raw in salads, but can also be cooked in a variety of dishes.",
       imageName: radish,
       startMonth: "November",
       endMonth: "December",
@@ -2803,6 +2789,8 @@ const CropsContentState = (props) => {
     {
       id: 6,
       name: "spinach",
+      description:
+        "Spinach is a leafy green vegetable that is rich in vitamins and minerals. It is commonly used in salads, smoothies, and cooked dishes. Spinach is known for its dark green, tender leaves.",
       imageName: spinachPreWinter,
       startMonth: "December",
       endMonth: "january",
@@ -2889,6 +2877,8 @@ const CropsContentState = (props) => {
     {
       id: 1,
       name: "Brussels_Sprouts",
+      description:
+        "Brussels Sprouts are small, leafy green vegetables that belong to the cabbage family. They grow in clusters along the stem and are known for their slightly bitter flavor. Brussels sprouts are commonly roasted, sautéed, or used in salads.",
       imageName: Brussels_Sprouts,
       startMonth: "January",
       endMonth: "February",
@@ -2973,6 +2963,8 @@ const CropsContentState = (props) => {
     {
       id: 2,
       name: "cotton",
+      description:
+        "Cotton is a soft, fluffy fiber that surrounds the seeds of the cotton plant. It is primarily used to make textiles, including clothing, bedding, and industrial products. Cotton is one of the most widely used natural fibers in the world.",
       imageName: cotton_winter,
       startMonth: "January",
       endMonth: "February",
@@ -3057,6 +3049,8 @@ const CropsContentState = (props) => {
     {
       id: 3,
       name: "mustard",
+      description:
+        "Mustard is a plant in the cabbage family that produces seeds used as a spice. It is known for its pungent flavor and is commonly used in condiments, sauces, and pickles. Mustard seeds can also be pressed to extract mustard oil.",
       imageName: mustard_winter,
       startMonth: "January",
       endMonth: "February",
@@ -3141,6 +3135,8 @@ const CropsContentState = (props) => {
     {
       id: 4,
       name: "peas",
+      description:
+        "Wheat is a cereal grain that is a staple food in many parts of the world. It is used to make a wide range of products, including bread, pasta, and cereals. Wheat is known for its high carbohydrate content and is a significant source of energy.",
       imageName: peas_winter,
       startMonth: "January",
       endMonth: "February",
@@ -3225,6 +3221,8 @@ const CropsContentState = (props) => {
     {
       id: 5,
       name: "wheat",
+      description:
+        "Wheat is a cereal grain that is a staple food in many parts of the world. It is used to make a wide range of products, including bread, pasta, and cereals. Wheat is known for its high carbohydrate content and is a significant source of energy.",
       imageName: wheat,
       startMonth: "February",
       endMonth: "March",

@@ -1,8 +1,16 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../CSS/Form.css";
+import LogContext from "../Context/logInOut/LogContext";
+import axios from "axios";
+import AlertContext from "../Context/alert/AlertContext";
 
 export default function Login() {
+  const LogObj = useContext(LogContext);
+  const AlertObj = useContext(AlertContext);
+
+  const navigate = useNavigate();
+
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -12,19 +20,34 @@ export default function Login() {
     setData((values) => ({ ...values, [e.target.name]: e.target.value }));
   };
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (data.email !== "") {
       if (/.+@.+\.[A-Za-z]+$/.test(data.email)) {
         if (data.password !== null && data.password !== "") {
-          console.log(data);
+          await axios
+            .post("http://localhost:8080/login", data)
+            .then((response) => {
+              if (
+                response.data.message ===
+                  "Email is Not Exists Please Signup first" ||
+                response.data.message === "Incorrect Password"
+              ) {
+                AlertObj.showAlert(response.data.message, "Danger", "red");
+              } else {
+                AlertObj.showAlert(response.data.message, "Success", "green");
+                LogObj.handleCookies(response.data);
+                navigate("/home");
+              }
+            })
+            .catch((err) => console.log(err));
         } else {
-          console.log("Password is empty");
+          AlertObj.showAlert("Password is empty", "Warning", "yellow");
         }
       } else {
-        console.log("In Valid Email");
+        AlertObj.showAlert("In Valid Email Syntax", "Warning", "yellow");
       }
     } else {
-      console.log("Email is empty");
+      AlertObj.showAlert("Email is empty", "Warning", "yellow");
     }
   };
   return (

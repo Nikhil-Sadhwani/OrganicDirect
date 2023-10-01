@@ -1,35 +1,58 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "../CSS/Form.css";
+import axios from "axios";
+import AlertContext from "../Context/alert/AlertContext";
 
 export default function SignUp() {
+  const AlertObj = useContext(AlertContext);
+  const navigate = useNavigate();
   const [data, setData] = useState({
     email: "",
     password: "",
     confirmpassword: "",
+    role: "user",
   });
 
   const handleChange = (e) => {
     setData((values) => ({ ...values, [e.target.name]: e.target.value }));
   };
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     if (data.email !== "") {
       if (/.+@.+\.[A-Za-z]+$/.test(data.email)) {
         if (data.password !== "") {
           if (data.password === data.confirmpassword) {
-            console.log(data);
+            await axios
+              .post("http://localhost:8080/signup", data)
+              .then((response) => {
+                if (response.data.message === "Email is Already Exists") {
+                  AlertObj.showAlert(
+                    response.data.message,
+                    "Warning",
+                    "yellow"
+                  );
+                } else {
+                  AlertObj.showAlert(response.data.message, "Success", "green");
+                  navigate("/login");
+                }
+              })
+              .catch((err) => console.log(err));
           } else {
-            console.log("Confirm Password is not same as Password");
+            AlertObj.showAlert(
+              "Confirm Password is not same as Password",
+              "Warning",
+              "yellow"
+            );
           }
         } else {
-          console.log("Password is empty");
+          AlertObj.showAlert("Password is empty", "Warning", "yellow");
         }
       } else {
-        console.log("In Valid Email");
+        AlertObj.showAlert("In Valid Email Syntax", "Warning", "yellow");
       }
     } else {
-      console.log("Email is empty");
+      AlertObj.showAlert("Email is empty", "Warning", "yellow");
     }
   };
   return (
@@ -71,7 +94,7 @@ export default function SignUp() {
                 placeholder="Confirm Password"
               />
             </div>
-            <button className="login-btn" onClick={handleSignup}>
+            <button className="login-btn" onClick={() => handleSignup()}>
               SIGNUP
             </button>
 
